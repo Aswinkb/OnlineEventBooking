@@ -1,28 +1,27 @@
 <!-- Button to trigger the modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
-    Login
-  </button>
-  <app-login></app-login>
+<button type="button"class="btn btn-warning mt-4 anim" data-bs-toggle="modal"
+data-bs-target="#loginModal">
+Get Started
+</button>
+
   <!-- The modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+  <div class="modal fade"  id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered w-50" >
+      <div class="modal-content " style="background-color: rgb(16, 15, 15,0.5); border-radius: 10%;">
+        <div class="modal-header ">
+          <h3 class="modal-title text-white" style="padding-left: 45%;"  id="loginModalLabel">Login</h3>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body text-center">
           <!-- Your login form goes here -->
-          <form>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          <form class="">
+            <div class="mb-3 container p-3">
+              <input type="email" class="form-control " id="email" placeholder="Enter your email">
+              <input type="password" class="form-control mt-5 mb-2" id="password" placeholder="Enter your password">
+              <a class="text-white" href="" data-bs-dismiss="modal" routerLink="userRegister">Become a member</a>
             </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Enter your password">
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-success">Login</button>
+            <button type="button" data-bs-dismiss="modal" class="btn btn-warning ms-3" >Close</button>
           </form>
         </div>
       </div>
