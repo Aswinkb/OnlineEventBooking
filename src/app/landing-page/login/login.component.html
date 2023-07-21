@@ -16,11 +16,11 @@ Get Started
           <!-- Your login form goes here -->
           <form class="">
             <div class="mb-3 container p-3">
-              <input type="email" class="form-control " id="email" placeholder="Enter your email">
-              <input type="password" class="form-control mt-5 mb-2" id="password" placeholder="Enter your password">
+              <input [(ngModel)]="email" type="email" class="form-control " id="e1" name="email" placeholder="Enter your email">
+              <input [(ngModel)]="upsw" type="password" class="form-control mt-5 mb-2" id="p1" name="psw" placeholder="Enter your password">
               <a class="text-white" href="" data-bs-dismiss="modal" routerLink="userRegister">Become a member</a>
             </div>
-            <button type="submit" class="btn btn-success">Login</button>
+            <button (click)="login()" type="submit" class="btn btn-success">Login</button>
             <button type="button" data-bs-dismiss="modal" class="btn btn-warning ms-3" >Close</button>
           </form>
         </div>

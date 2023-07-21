@@ -8,4 +8,6 @@ const routes: Routes = [{ path: 'landingPage', loadChildren: () => import('./lan
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -6,8 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(){
-    
+  email: any
+  upsw: any
+  constructor(private us: UserService) {
+
   }
-  
+  login() {
+    var email = this.email
+    var upsw = this.upsw
+    this.us.login(email, upsw).subscribe((result: any) => {
+      alert(result.message)
+    },
+      result => {
+        alert(result.error.message)
+      })
+  }
+
 }
