@@ -33,15 +33,40 @@
                         style="background-color: rgba(128, 128, 128, 0.4); border-radius: 7%;">
 
                         <div>
-                            <input [(ngModel)]="uname" class="form-control mb-3" type="text" name="uname" id="n1" placeholder="Name">
-                            <input [(ngModel)]="email" class="form-control mb-3" type="email" name="uemail" id="e1" placeholder="Email">
-                            <input [(ngModel)]="mobile" class="form-control mb-3" type="text" name="umobno" id="m1" placeholder="Mobile No">
-                            <input [(ngModel)]="upsw" class="form-control mb-3" type="password" name="upsw" id="p1" placeholder="Password">
-                            <input [(ngModel)]="cpsw" class="form-control mb-3" type="password" name="ucpsw" id="cp1" placeholder="Confirm password">
+                            <form [formGroup]="registerForm" id="form1" action="">
+                                <input formControlName="uname" class="form-control mb-3" type="text" name="uname" id="n1"
+                                    placeholder="Name">
+                                    <div *ngIf="(this.registerForm.get('uname')?.errors)&&(this.registerForm.get('uname')?.touched)">
+                                        <p class="text-danger text-center">This is a required field</p>
+                                    </div>
+                                <input formControlName="email" class="form-control mb-3" type="email" name="uemail" id="e1"
+                                    placeholder="Email">
+                                    <div *ngIf="(this.registerForm.get('email')?.errors)&&(this.registerForm.get('email')?.touched)">
+                                        <p class="text-danger text-center">Inavlid email</p>
+                                    </div>
+                                <input formControlName="mobile" class="form-control mb-3" type="text" name="umobno" id="m1"
+                                    placeholder="Mobile No">
+                                    <div *ngIf="(this.registerForm.get('mobile')?.errors)&&(this.registerForm.get('mobile')?.touched)">
+                                        <p class="text-danger text-center">Inavlid mobile number</p>
+                                    </div>
 
+                                <input formControlName="upsw" class="form-control mb-3" type="password" name="upsw1" id="p1"
+                                    placeholder="Password">
+                                    <div *ngIf="(this.registerForm.get('upsw')?.errors)&&(this.registerForm.get('upsw')?.touched)">
+                                        <p class="text-danger text-center">This is a required field</p>
+                                    </div>
+
+                                <input formControlName="cpsw" class="form-control mb-3" type="password" name="ucpsw"
+                                    id="cp1" placeholder="Confirm password">
+                                    <div *ngIf="pswCheck">
+                                        <p class="text-danger text-center">password doesn't match</p>
+                                    </div>
+                    
+                            </form>
                         </div>
-                        <button (click)="signup()" class="btn btn-outline-success " style="margin-left: 35%;">Register</button>
-                        <button class="btn btn-outline-danger ms-3" routerLink="">Close</button>
+                        <button (click)="signup()" type="submit" class="btn btn-outline-success "
+                            style="margin-left: 35%;">Register</button>
+                        <button class="btn btn-outline-danger ms-3" (click)="gobacK()">Close</button>
 
                     </div>
                 </div>

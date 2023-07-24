@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bree+Serif&family=Freehand&family=IBM+Plex+Serif:wght@600&family=Lugrasimo&family=Oswald:wght@700&family=Pacifico&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="div2 py-5   img-fluid"
+        style="background-image: url(https://i.postimg.cc/L6DfSTDX/pexels-pixabay-509922-1.jpg); background-position: center; background-size: cover;">
+        <div class="container my-5 p-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 ">
+                    <div class="container">
+                        <h3 style="color: rgb(243, 139, 12); font-family: 'Lugrasimo', cursive;" class="fw-bold">Embrace
+                            Adventure</h3>
+                        <div class="container p-3">
+                            <h1 style="font-family: 'Pacifico', cursive;">
+                                "Register today and dive into a sea of exciting activities and events."
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="w-75 container p-5"
+                        style="background-color: rgba(128, 128, 128, 0.4); border-radius: 7%;">
+
+                        <div>
+                            <form  id="form1" action="">
+                                <input [(ngModel)]="udata.uname"  class="form-control mb-3"
+                                    type="text" name="uname" id="n1" placeholder="Name">
+                                <input [(ngModel)]="udata.email" class="form-control mb-3" type="email" name="uemail"
+                                    id="e1" [(placeholder)]="udata.email" disabled>
+                                <!-- <div *ngIf="(this.editForm.get('email')?.errors)&&(this.editForm.get('email')?.touched)">
+                                        <p class="text-danger text-center">Inavlid email</p>
+                                    </div> -->
+                                <input [(ngModel)]="udata.mobile"  class="form-control mb-3"
+                                    type="text" name="umobno" id="m1" placeholder="Mobile No">
+
+                                <input [(ngModel)]="udata.password"  class="form-control mb-3"
+                                    type="password" name="upsw1" id="p1" placeholder="Password">
+
+                                <input  [(ngModel)]="cpsw"  class="form-control mb-3" type="password" name="ucpsw"
+                                    id="cp1" placeholder="Confirm password">
+                                <div *ngIf="pswCheck">
+                                    <p class="text-danger text-center">password doesn't match</p>
+                                </div>
+                                <button (click)="editProfile()" type="submit" class="btn btn-outline-success "
+                                    style="margin-left: 35%;">Update</button>
+                                <button class="btn btn-outline-danger ms-3" (click)="gobacK()">Close</button>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Image element - set the background image for the header in the line below-->
+
+</body>
+
+</html>

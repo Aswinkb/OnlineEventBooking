@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LandingPageModule } from './landing-page/landing-page.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    HttpClientModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    LandingPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

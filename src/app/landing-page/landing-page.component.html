@@ -50,8 +50,59 @@
                 data-bs-target="#loginModal">
                 Get Started
             </button> -->
-            <app-login></app-login>
+            <div *ngIf="isLocalStorageEmpty()">
+                <app-login></app-login>
 
+            </div>
+            <div *ngIf="!isLocalStorageEmpty()">
+                <button class="btn btn-warning mt-3" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Your profile
+                </button>
+
+                <div class="offcanvas offcanvas-start bg-dark text-white" data-bs-scroll="true" data-bs-backdrop="false"
+                    tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header text-center">
+                        <h4 class="offcanvas-title text-center text-warning" id="offcanvasScrollingLabel">Hi! {{uname}}
+                        </h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div>
+                            <div class="list-group text-center border border-0 w-100" style="margin-top: 7%;">
+                                <button id="anim" type="button" data-bs-toggle="modal" routerLink="editprofile" data-bs-target="#exampleModal"
+                                    class="list-group-item list-group-item-action bg-dark text-white border-0">
+                                    <i class="fa-solid fa-pen  ms-3 me-2"></i>Edit Profile</button>
+                                <hr class="text-white">
+                                <button id="anim" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"
+                                    class="list-group-item list-group-item-action bg-dark text-white border-0"
+                                    style="margin-top: 7%;">
+                                    <i class="fa-solid fa-clock-rotate-left  ms-3 me-2"></i>Booking history</button>
+                                <hr class="text-white">
+                                <button id="anim" type="button"
+                                    class="list-group-item list-group-item-action bg-dark text-white border-0"
+                                    style="margin-top: 7%;">
+                                    <i class="fa-solid fa-person-circle-minus text-white ms-3 me-2"></i>Delete
+                                    Account</button>
+                                <hr class="text-white">
+                                <button id="anim" type="button" 
+                                    class="list-group-item list-group-item-action bg-dark text-white border-0"
+                                    style="margin-top: 7%;" (click)="logout()">
+                                    <i class="fa-solid fa-right-from-bracket text-white ms-3 me-2"></i>Log
+                                    out</button>
+                                <hr class="text-white">
+
+                            </div>
+                            <div  >
+                                <h6 class="text-uppercase ">Book It Now</h6>
+                                <img class="anim" src="https://i.postimg.cc/j2QqYvP3/Book-it-now-logos-transparent.png" style="width: 50%;"
+                                    alt="">
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 

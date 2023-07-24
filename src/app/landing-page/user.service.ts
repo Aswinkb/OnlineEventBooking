@@ -27,4 +27,13 @@ export class UserService {
     }
     return this.http.post('http://localhost:3000/login',body)
   }
+  // api to get user data
+  getUser(currentId:any){
+    return this.http.get('http://localhost:3000/getuser/'+currentId)
+ 
+  }
+  // api to update
+  updateUser(uid:any,udata:any){
+    return this.http.put('http://localhost:3000/updateuser/'+uid,udata)
+  }
 }

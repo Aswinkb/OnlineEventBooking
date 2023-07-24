@@ -1,30 +1,35 @@
 <!-- Button to trigger the modal -->
-<button type="button"class="btn btn-warning mt-4 anim" data-bs-toggle="modal"
-data-bs-target="#loginModal">
-Get Started
+<button type="button" class="btn btn-warning mt-4 anim" data-bs-toggle="modal" data-bs-target="#loginModal">
+  Get Started
 </button>
 
-  <!-- The modal -->
-  <div class="modal fade"  id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered w-50" >
-      <div class="modal-content " style="background-color: rgb(16, 15, 15,0.5); border-radius: 10%;">
-        <div class="modal-header ">
-          <h3 class="modal-title text-white" style="padding-left: 45%;"  id="loginModalLabel">Login</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center">
-          <!-- Your login form goes here -->
-          <form class="">
-            <div class="mb-3 container p-3">
-              <input [(ngModel)]="email" type="email" class="form-control " id="e1" name="email" placeholder="Enter your email">
-              <input [(ngModel)]="upsw" type="password" class="form-control mt-5 mb-2" id="p1" name="psw" placeholder="Enter your password">
-              <a class="text-white" href="" data-bs-dismiss="modal" routerLink="userRegister">Become a member</a>
-            </div>
-            <button (click)="login()" type="submit" class="btn btn-success">Login</button>
-            <button type="button" data-bs-dismiss="modal" class="btn btn-warning ms-3" >Close</button>
-          </form>
-        </div>
+<!-- The modal -->
+<div class="modal fade"  id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered w-50">
+    <div class="modal-content " style="background-color: rgb(16, 15, 15,0.5); border-radius: 10%;">
+      <div class="modal-header ">
+        <h3 class="modal-title text-white" style="padding-left: 45%;" id="loginModalLabel">Login</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <!-- Your login form goes here -->
+        <form class="">
+          <div class="mb-3 container p-3">
+            <form [formGroup]="loginForm">
+              <input formControlName="email" type="email" class="form-control " id="e1" name="email"
+                placeholder="Enter your email">
+              <div *ngIf="(this.loginForm.get('email')?.errors)&&(this.loginForm.get('email')?.touched)">
+                <p class="text-danger text-center">Inavlid email</p>
+              </div>
+
+              <input formControlName="upsw" type="password" class="form-control mt-5 mb-2" id="p1" name="psw"
+                placeholder="Enter your password">
+            </form> <a class="text-white" href="" data-bs-dismiss="modal" routerLink="userRegister">Become a member</a>
+          </div>
+          <button (click)="login()" data-bs-dismiss="modal" type="submit" class="btn btn-success">Login</button>
+          <button type="button" data-bs-dismiss="modal" class="btn btn-warning ms-3">Close</button>
+        </form>
       </div>
     </div>
   </div>
-  
+</div>

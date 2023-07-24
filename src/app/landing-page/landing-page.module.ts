@@ -6,7 +6,10 @@ import { LandingPageComponent } from './landing-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { EventsComponent } from './events/events.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditprofileComponent } from './editprofile/editprofile.component';
+import { Router } from '@angular/router';
+import { ViewEventComponent } from './view-event/view-event.component';
 
 
 @NgModule({
@@ -14,14 +17,27 @@ import { FormsModule } from '@angular/forms';
     LandingPageComponent,
     LoginComponent,
     RegisterComponent,
-    EventsComponent
+    EventsComponent,
+    EditprofileComponent,
+    ViewEventComponent
   ],
   imports: [
     CommonModule,
     LandingPageRoutingModule,
-    FormsModule
+    FormsModule,ReactiveFormsModule
+  ],
+  exports:[
+    LandingPageComponent,
+    LoginComponent,
+    RegisterComponent,
+    EventsComponent,
+    EditprofileComponent
+
   ]
 })
 export class LandingPageModule { 
-  
+constructor( ){
+
+}
+
 }
