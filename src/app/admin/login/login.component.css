@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-image: url(https://i.postimg.cc/PxJqz1BH/minimalist-simple-linkedin-background-t6so1dkoxvwvwo8b.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.login-form {
+    /* width: 300px; */
+    /* padding: 20px; */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* .login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button.back-button {
+    background-color: #6c757d;
+} */
+
+@media (max-width: 400px) {
+    .login-form {
+        width: 90%;
+    }
+}

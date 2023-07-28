@@ -1,0 +1,15 @@
+.circle-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(245, 17, 245); /* Pink color */
+    color: #ffffff; /* White text color */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    /* Optional: Add box-shadow and transition for a more appealing look */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }

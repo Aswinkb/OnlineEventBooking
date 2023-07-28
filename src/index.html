@@ -20,19 +20,20 @@
     <nav class="navbar navbar-expand-lg navbar-light  fixed-top text-white"
         style="background-color: rgb(8, 8, 8,.4); color: white;">
         <div class="container" style="color: white;">
-            
-            <a class="anim navbar-brand text-warning"
-                href="">Bookitnow</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <a class="anim navbar-brand text-warning" href="">Bookitnow</a><button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link active text-warning " aria-current="page"
-                        href="landingPage/events" ><strong>Events</strong></a></li>
+                            href="landingPage/events"><strong>Events</strong></a></li>
                     <li class="nav-item ms-4"><a class="nav-link text-warning" href="#!"><strong>Gallery</strong></a>
                     </li>
                     <li class="nav-item ms-4"><a class="nav-link text-warning" href="#!"><strong>About</strong></a></li>
-                    <!-- <li class="nav-item ms-4"><a class="nav-link text-warning" href="#!"><strong>Login</strong></a></li> -->
+                    <li class="nav-item ms-4"><a class="nav-link text-warning" id="lgout"  href=""><strong>Home</strong></a></li>
+
                 </ul>
             </div>
         </div>
@@ -61,23 +62,24 @@
 
 
                     <!-- Grid column -->
-                    <div  class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold">Useful links</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto"
                             style="width: 60px; background-color: #7c4dff; height: 2px" />
-                        <p >
+                        <p>
                             <a href="" class=" text-white" style="text-decoration: none;">Your Account</a>
                         </p>
                         <p>
-                            <a href="adminpage" class="text-white" style="text-decoration: none;">Schedule your events</a>
+                            <a href="admin" class="text-white" style="text-decoration: none;">Schedule your events</a>
                         </p>
                         <p>
                             <a href="#!" class="text-white" style="text-decoration: none;">Gallery</a>
                         </p>
-                        
+
                         <p>
-                            <a href="#!" class=" text-white" style="text-decoration: none;"><span class="anim">Events</span></a>
+                            <a href="#!" class=" text-white" style="text-decoration: none;"><span
+                                    class="anim">Events</span></a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -107,7 +109,7 @@
             <!-- Left -->
 
             <!-- Right -->
-            <div >
+            <div>
                 <a href="" style="text-decoration: none;" class="text-white me-4 ">
                     <i class="fab fa-facebook-f"></i>
                 </a>
@@ -130,5 +132,11 @@
 
     </footer>
 </body>
+<script>
+    if (localStorage.getItem('!currentId')) {
+        lgout.style.display = 'none'
+    }
+
+</script>
 
 </html>

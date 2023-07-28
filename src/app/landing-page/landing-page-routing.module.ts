@@ -10,7 +10,7 @@ const routes: Routes = [{ path: '', component: LandingPageComponent },
 { path: 'userRegister', component: RegisterComponent },
 {path: 'events',component:EventsComponent},
 {path: 'editprofile',component:EditprofileComponent},
-{path:'viewEvent',component:ViewEventComponent}
+{path:'viewEvent/:id',component:ViewEventComponent}
 
 ];
 

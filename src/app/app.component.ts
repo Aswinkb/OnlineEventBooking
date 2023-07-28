@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LandingPageModule } from './landing-page/landing-page.module';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'roughPrj';
+  constructor(private lc:LandingPageModule){
+     
+  }
 }

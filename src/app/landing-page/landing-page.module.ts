@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { Router } from '@angular/router';
 import { ViewEventComponent } from './view-event/view-event.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { ViewEventComponent } from './view-event/view-event.component';
   imports: [
     CommonModule,
     LandingPageRoutingModule,
-    FormsModule,ReactiveFormsModule
+    FormsModule,ReactiveFormsModule,HttpClientModule
   ],
   exports:[
     LandingPageComponent,

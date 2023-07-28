@@ -1,1 +1,23 @@
-<p>login works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+
+<body>
+  <div class="login-form w-25 container-fluid text-center p-5 bg-transparent">
+    <h2 class="text-white" style="  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Login</h2>
+    <form action="" [formGroup]="adminForm" class="p-1">
+      <input type="text" formControlName="aid" id="aid" name="adminId" class="form-control mb-3" placeholder="User ID">
+      <input type="password" formControlName="apsw" id="apsw" name="adminpsw" class="form-control mb-3" placeholder="Password">
+      <button type="submit" (click)="alogin()" class="btn btn-outline-success">Login</button>
+      <button class="btn btn-outline-danger ms-2" (click)="goBack()">Back</button>
+    </form>
+  </div>
+
+</body>
+
+</html>

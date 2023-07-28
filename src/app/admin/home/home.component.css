@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://i.postimg.cc/PxJqz1BH/minimalist-simple-linkedin-background-t6so1dkoxvwvwo8b.jpg);
+    background-size: cover;
+    background-position: center;
+}

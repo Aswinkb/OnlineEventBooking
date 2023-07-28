@@ -1,1 +1,74 @@
-<p>home works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Form with 11 Input Fields</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="w-100 " style="margin: 0; padding-top: 3%;">
+        <div class="container w-50 mt-5 text-center mb-3" style="background-color: rgba(10, 9, 9, 0.2);">
+            <h2 class="text-center mb-2 text-white" style="  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Schedule your
+                events</h2>
+            <div class="w-75 container">
+                <form [formGroup]="scheduleForm" id="addform" class="p-3">
+                    <div class="form-group">
+                        <input type="number" formControlName="eid" placeholder="Id" name="id" class="form-control"
+                            id="input1">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" formControlName="cid" placeholder="category id" name="cid"
+                            class="form-control" id="input2">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" formControlName="ename" placeholder="Event name" name="eid"
+                            class="form-control" id="input3">
+                    </div>
+                    <!-- Add more input fields as needed -->
+                    <div class="form-group">
+                        <input type="text" formControlName="desc" placeholder="description" name="desc"
+                            class="form-control" id="input4">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" formControlName="price" placeholder="price" name="price"
+                            class="form-control" id="input5">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" formControlName="is_available" placeholder="is_available" name="avail"
+                            class="form-control" id="input6">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" formControlName="eimage" placeholder="event image" name="image"
+                            class="form-control" id="input7">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" formControlName="venue" placeholder="venue" name="venue" class="form-control"
+                            id="input8">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" formControlName="organizer" placeholder="organizer" name="org"
+                            class="form-control" id="input9">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" formControlName="date" placeholder="date (dd/mm/yyy)" name="date" class="form-control"
+                            id="input10">
+                    </div>
+                    <div class="form-group">
+                        <input type="time" formControlName="time" placeholder="time" name="time" class="form-control"
+                            id="input10">
+                    </div>
+                    <button (click)="addevent()" type="submit" class="btn btn-outline-success">Add</button>
+                    <button (click)="reset()" type="button" class="btn btn-outline-danger ms-3">Reset</button>
+                </form>
+
+            </div>
+        </div>
+        <button type="button" (click)="logout()" class="btn btn-warning mb-2" style="margin-left: 65%;">Logout</button>
+
+    </div>
+</body>
+
+</html>

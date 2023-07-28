@@ -36,4 +36,17 @@ export class UserService {
   updateUser(uid:any,udata:any){
     return this.http.put('http://localhost:3000/updateuser/'+uid,udata)
   }
+  // api to show events
+  viewevents(){
+    return this.http.get('http://localhost:3000/viewevents')
+  }
+  // api to view single event
+  event(eid:any){
+    return this.http.get('http://localhost:3000/viewevent/'+eid)
+
+  }
+  // api to book event
+  booknow(uid:any,edata:{}){
+    return this.http.post('http://localhost:3000/booknow/'+uid,edata)
+  }
 }
